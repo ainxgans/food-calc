@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [items, setItems] = useState([{ price: "", qty: "" }]);
+  const [items, setItems] = useState([{ price: "", qty: "1" }]);
   const [totalAfterDiscount, setTotalAfterDiscount] = useState("");
 
   const handleDiscountChange = (e) => {
@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const lastItem = items[items.length - 1];
     if (lastItem.price !== "" && lastItem.qty !== "") {
-      setItems([...items, { price: "", qty: "" }]);
+      setItems([...items, { price: "", qty: "1" }]);
     }
   }, [items]);
 
